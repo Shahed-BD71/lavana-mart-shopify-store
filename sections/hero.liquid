@@ -1,6 +1,6 @@
 <section class="inner-hero-section">
     {% if section.settings.image != blank %}
-    <img src="{{section.settings.image | img_url}}" alt="">
+    <img src="{{section.settings.image | img_url: "large"}}" alt="">
     {% else %}
         {% capture current %}{% cycle 1,2 %}{% endcapture %}
         {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg'}}
@@ -8,14 +8,13 @@
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-6 col-md-8 mx-auto">
-                <h1>{{section.settings.title}}</h1>
-                <p>{{section.settings.description}}</p>
+                <h1 class="text-warning font-bold">{{section.settings.title}}</h1>
+                <p class="font-bold">{{section.settings.description}}</p>
                 <a href="{{section.settings.button_link}}" class="btn btn-success">{{section.settings.button_label}}</a>
             </div>
         </div>
     </div>
 </section>
-
 {% schema %}
 { 
     "name": "Hero Section",
@@ -48,6 +47,12 @@
             "type": "url",
             "id": "button_link", 
             "label": "Heading Button link"
+        },
+        {
+            "type": "checkbox",
+            "id": "dynamic_buttons_checkbox",
+            "label": "Enable Dynamic Buttons",
+            "default": false
         }
     ],
     "presets": [

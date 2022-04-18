@@ -2,7 +2,7 @@
 // Shopify will compile SCSS/SASS on each deploy.
 // Note: "@import" rules aren’t supported.
 html, body{
-    color: red;
+   
 }
 
 .inner-hero-section{
@@ -11,6 +11,14 @@ html, body{
     width: 100%;
     height: 400px;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .inner-hero-section img{ 
+        background-size: cover;
+        height: 80%;
+    }
+  }
 
 .inner-hero-section img,
 .inner-hero-section svg {
