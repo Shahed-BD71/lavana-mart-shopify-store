@@ -10,7 +10,7 @@
             <table class="table table-borderless">
               <thead>
                 <th colspan="2">Products</th>
-                <th>Price</th>
+                <th class="d-none d-sm-block">Price</th>
                 <th>Qty</th>
                 <th>Total</th>
               </thead>
@@ -38,7 +38,7 @@
                       >Remove</a
                     >
                   </td>
-                  <td class="fst-italic">{{ item.price | money }}</td>
+                  <td class="fst-italic d-none d-sm-block">{{ item.price | money }}</td>
                   <td>
                     <input
                       class="form-control"
