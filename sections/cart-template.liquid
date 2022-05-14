@@ -19,7 +19,8 @@
                 <tr>
                   <td>
                     <a href="{{ item.url | within: collections.all }}">
-                      <img class="d-none d-sm-block"
+                      <img
+                        class="d-none d-sm-block"
                         src="{{ item | img_url: 'small' }}"
                         alt="{{ item.title | escape }}"
                       />
@@ -38,10 +39,12 @@
                       >Remove</a
                     >
                   </td>
-                  <td class="fst-italic d-none d-sm-block">{{ item.price | money }}</td>
+                  <td class="fst-italic d-none d-sm-block">
+                    {{ item.price | money }}
+                  </td>
                   <td>
                     <input
-                      class="form-control"
+                      class="form-control w-sm-50 w-md-25 w-75"
                       type="number"
                       name="updates[]"
                       id="updates_{{ item.key }}"
