@@ -20,7 +20,7 @@
           <h3 class="card-title">
             <a href="{{ article.url }}">{{ article.title }}</a>
           </h3>
-          {{ article.author }} @ {{ article.created_at | date: format: "abbreviated_date"}}
+          By {{ article.author | truncatewords: 1, ""}} on {{ article.created_at | date: format: "abbreviated_date"}}
           <p class="cart-text">
             {% if article.excerpt.size > 0 %}
             {{ article.excerpt }}
