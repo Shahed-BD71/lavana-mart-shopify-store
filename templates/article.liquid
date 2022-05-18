@@ -35,7 +35,7 @@ comment.created_at %} {% assign number_of_comments = article.comments_count %}
             <div>{{ comment.content }}</div>
           </div>
         </div>
-        {% endfor %} {% if paginate.pages > 1 %} {%render 'pagination'%} {%
+        {% endfor %} {% if paginate.pages > 1 %}  {% render 'pagination' paginate: paginate%} {%
         endif %} {% endpaginate %}
 
         <div>
