@@ -62,7 +62,7 @@ comment.created_at %} {% assign number_of_comments = article.comments_count %}
                 value="{{ form.author }}"
                 autocapitalize="words"
               />
-              <label for="CommentAuthor">name</label>
+              <label for="CommentAuthor">Your Name</label>
             </div>
 
             <div class="form-floating my-3">
@@ -76,7 +76,7 @@ comment.created_at %} {% assign number_of_comments = article.comments_count %}
                 autocapitalize="off"
                 class="form-control"
               />
-              <label for="CommentEmail">email</label>
+              <label for="CommentEmail">Your Email</label>
             </div>
 
             <div class="form-floating my-3">
@@ -88,7 +88,7 @@ comment.created_at %} {% assign number_of_comments = article.comments_count %}
                 placeholder="message"
                 >{{ form.body }}</textarea
               >
-              <label for="CommentBody">message</label>
+              <label for="CommentBody">Your Message</label>
             </div>
             <input class="btn btn-success" type="submit" value="Post" />
           </div>
