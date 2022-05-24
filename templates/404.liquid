@@ -1,2 +1,14 @@
-<h1>{{ 'general.404.title' | t }}</h1>
-<p>{{ 'general.404.subtext_html' | t }}</p>
+<section class="container">
+  <div class="d-flex align-items-center justify-content-center vh-100">
+    <div class="text-center">
+      <h1 class="display-1 fw-bold">404</h1>
+      <p class="fs-3">
+        <span class="text-danger">Opps!</span> {{ "general.404.title" | t }}
+      </p>
+      <p class="lead">
+        {{ "general.404.subtext_html" | t }}
+      </p>
+      <a href="/" class="btn btn-primary">Go Home</a>
+    </div>
+  </div>
+</section>

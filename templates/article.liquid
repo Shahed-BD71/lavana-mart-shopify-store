@@ -16,6 +16,7 @@ comment.created_at %} {% assign number_of_comments = article.comments_count %}
 
 <div class="container my-5">
   <div class="row">
+    {%- comment -%}Article Section{%- endcomment -%}
     <div class="col-12 col-md-8">
       <div class="my-3">{{ article.content }}</div>
       <section class="comment-section">
@@ -97,6 +98,9 @@ comment.created_at %} {% assign number_of_comments = article.comments_count %}
         {% endif %}
       </section>
     </div>
-    <div class="col-12 col-md-4"></div>
+    {%- comment -%}Sidebar section{%- endcomment -%}
+    <div class="col-12 col-md-4">
+      {% section 'sidebar' %}
+    </div>
   </div>
 </div>
