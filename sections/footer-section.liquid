@@ -1,4 +1,4 @@
-<footer class="footer-section mt-5 py-5 bg-light ">
+<footer class="footer-section bottom-0 mt-5 py-5 bg-light ">
     <div class="container">
         <div class="row row-cols-{{section.settings.col_num}}">
             {% for block in section.blocks %}
@@ -10,14 +10,14 @@
                 <ul class="list-unstyled text-small">
                     {% for link in linklists[footer_linklist].links %}
                         <li>
-                            <a href="{{link.url}}">{{link.title | escape}}</a>
+                            <a class="text-decoration-none" href="{{link.url}}">{{link.title | escape}}</a>
                         </li>
                     {% endfor %}
                 </ul>
             </div>
             {% else if block.type == 'text' %}
                 <div class="col">
-                    <img src="{{item.logo | img_url: 'medium'}}" alt="" class="mb-5 h-25">
+                    <!-- <img src="{{item.logo | img_url: 'medium'}}" alt="" class="mb-5 h-25"> -->
                     <h5>{{item.title}}</h5>
                     <p>{{item.description}}</p>
                 </div>
