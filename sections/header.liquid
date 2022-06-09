@@ -4,7 +4,7 @@
     <button
       class="navbar-toggler"
       type="button"
-      data-bs-toggle="collapse"
+      data-bs-toggle="collapse" 
       data-bs-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup"
       aria-expanded="false"
@@ -35,10 +35,13 @@
           <a class="nav-link" href="/cart">Cart</a>
         </li>
       </ul>
+      <form method="GET" action="/search" role="search">
+        <input placeholder="Search" class="w-75 form-control" type="text" name="q" value="{{search.terms | escape}}">
+      </form>
     </div>
   </div>
 </nav>
-{% schema %}
+{% schema %} 
 { 
     "name": "Brand Logo",
     "settings": [
