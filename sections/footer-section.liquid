@@ -1,6 +1,6 @@
 <footer class="footer-section bottom-0 mt-5 py-5 bg-light ">
     <div class="container">
-        <div class="row row-cols-{{section.settings.col_num}}">
+        <div class="row row-cols-md-4 row-cols-sm-2 row-cols-1 mx-auto justify-content-center g-2">
             {% for block in section.blocks %}
             {% assign item = block.settings %}
             {% if block.type == "link_list" %}
