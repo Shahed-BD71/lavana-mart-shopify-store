@@ -6,3 +6,4 @@ if (document.getElementById('sort_by') != null) {
     window.location = url.href;
   });
 }
+

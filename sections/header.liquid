@@ -28,7 +28,7 @@
         </li>
         {% endfor %}] {% else %}
         <li class="nav-item">
-          <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
+          <a class="nav-link {% if link.active %} active {% endif %}" href={{ link.url }}>{{ link.title }}</a>
         </li>
         {% endif %} {% endfor %}
         <li class="nav-item">
